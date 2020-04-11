@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-cargo install --git https://github.com/lpil/sonic-pi-tool/
