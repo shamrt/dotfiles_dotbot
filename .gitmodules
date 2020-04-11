@@ -1,12 +1,8 @@
 [submodule "meta/dotbot"]
-	path = meta/dotbot
-	url = https://github.com/anishathalye/dotbot.git
-	ignore = dirty
+  path = meta/dotbot
+  url = https://github.com/anishathalye/dotbot.git
+  ignore = dirty
 [submodule "meta/dotbot-brewfile"]
-	path = meta/dotbot-brewfile
-	url = https://github.com/sobolevn/dotbot-brewfile.git
-	ignore = dirty
-[submodule "apps/notmuch-py"]
-	path = apps/notmuch/notmuch-py
-	url = https://github.com/honza/mutt-notmuch-py
+  path = meta/dotbot-brewfile
+  url = https://github.com/sobolevn/dotbot-brewfile.git
   ignore = dirty
