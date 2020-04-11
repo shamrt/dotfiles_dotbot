@@ -1,3 +1,0 @@
-cd $HOME/.duplicity/gdrive
-export GOOGLE_DRIVE_SETTINGS=${HOME}/.duplicity/gdrive/credentials
-TARGET='gdocs://pagansoft@gmail.com/BackupThinkpad'
