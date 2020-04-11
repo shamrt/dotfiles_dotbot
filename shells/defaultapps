@@ -1,5 +1,4 @@
-export BROWSER=/usr/bin/qutebrowser
-export RTV_BROWSER=$BROWSER
+export BROWSER=/usr/bin/firefox
 export TRUEBROWSER=$BROWSER
 export TERMINAL=/usr/bin/terminal
 export EDITOR=/usr/bin/vim
