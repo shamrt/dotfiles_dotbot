@@ -1,0 +1,24 @@
+tap "homebrew/bundle"
+
+brew "blueutil"
+cask "maccy"
+brew "mas"
+brew "pinentry-mac"
+
+cask "qlcolorcode"
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-json"
+cask "sequel-pro"
+cask "tableplus"
+cask "the-unarchiver"
+
+mas "Cleaner-App", id: 1013897218
+mas "Dato", id: 1470584107
+mas "HazeOver", id: 430798174
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Telegram", id: 747648890
+mas "Xcode", id: 497799835
