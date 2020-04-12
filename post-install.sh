@@ -5,7 +5,7 @@
 # ---------------
 
 # fzf
-$HOMEBREW_PREFIX/opt/fzf/install
+"$HOMEBREW_PREFIX/opt/fzf/install"
 
 # ---------------
 # Node
