@@ -69,9 +69,11 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# Set Spaceship ZSH as a prompt
+# Spaceship prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+
+SPACESHIP_TIME_SHOW=true
 
 # Homebrew
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
