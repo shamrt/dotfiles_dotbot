@@ -1,7 +1,0 @@
-#!/bin/bash
-
-case $BLOCK_BUTTON in
-  1) /usr/bin/termite -e ~/bin/pacupdate >/dev/null 2>&1
-esac
-
-~/bin/i3pacman.py -q -a -b "#928374" -u "#b8bb26"
