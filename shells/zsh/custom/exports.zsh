@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
 # `.exports` is used to provide custom variables.
-#
-# This file is used as a part of `.shell_env`
-
 
 # === Compiler flags ===
 
@@ -13,7 +10,6 @@ export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
-
 
 # === Path modifications ===
 
@@ -36,7 +32,6 @@ PATH="$PATH:$HOME/.pyenv/versions/2.7.17/bin"
 
 export PATH
 
-
 # === General ===
 
 # Editor:
@@ -44,13 +39,13 @@ export EDITOR=$(command -v vi)
 
 # GPG:
 export GPG_TTY=$(tty)
-eval "$(gpg-agent --daemon --allow-preset-passphrase > /dev/null 2>&1)"
+eval "$(gpg-agent --daemon --allow-preset-passphrase >/dev/null 2>&1)"
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8'
 
 # Homebrew:
-export HOMEBREW_NO_ANALYTICS=1  # disables statistics that brew collects
+export HOMEBREW_NO_ANALYTICS=1 # disables statistics that brew collects
 
 # Pagers:
 # This affects every invocation of `less`.
@@ -64,7 +59,6 @@ export HOMEBREW_NO_ANALYTICS=1  # disables statistics that brew collects
 export LESS="-iRFXMx4"
 export PAGER='less'
 export MANPAGER='less'
-
 
 # === Version managers ===
 
@@ -84,7 +78,6 @@ source "$(brew --prefix)/opt/nvm/nvm.sh"
 # phpbrew:
 [[ -e "$HOME/.phpbrew/bashrc" ]] && source "$HOME/.phpbrew/bashrc"
 
-
 # === Histories ===
 
 # Enable persistent REPL history for `node`.
@@ -95,13 +88,11 @@ export NODE_REPL_MODE='sloppy'
 # Erlang and Elixir shell history:
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-
 # === Code highlight ===
 # https://github.com/zsh-users/zsh-syntax-highlighting
 
 # We won't highlight code longer than 200 chars, because it is slow:
 export ZSH_HIGHLIGHT_MAXLENGTH=200
-
 
 # === Notifications ===
 # https://github.com/MichaelAquilina/zsh-auto-notify
