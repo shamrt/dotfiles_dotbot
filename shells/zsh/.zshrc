@@ -34,6 +34,7 @@ plugins=(
   common-aliases
   extract
   gitfast
+  git-extras
   node
   nvm
   per-directory-history
