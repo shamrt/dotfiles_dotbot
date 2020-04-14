@@ -11,7 +11,7 @@ PROJECT_PATHS=(~/code ~/code/workspaces ~/code/workspaces/ro)
 source <(npm completion) 
 
 # pyenv
-$(pyenv root)/completions/pyenv.zsh 
+eval "$(pyenv init -)"
 
 # === z ===
 # https://github.com/rupa/z
