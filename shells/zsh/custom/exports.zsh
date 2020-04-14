@@ -30,6 +30,9 @@ PATH="$(brew --prefix)/share/npm/bin:$PATH"
 # python2 (required by npm and other tools, installed via pyenv):
 PATH="$PATH:$HOME/.pyenv/versions/2.7.17/bin"
 
+# Postgres
+PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+
 export PATH
 
 # === General ===
