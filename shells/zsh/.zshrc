@@ -40,6 +40,7 @@ plugins=(
   pj
   python
   vscode
+  yarn
   z
   zsh_reload
 )
