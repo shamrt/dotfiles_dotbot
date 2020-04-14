@@ -77,8 +77,8 @@ prompt spaceship
 
 SPACESHIP_TIME_SHOW=true
 
-# Homebrew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# Linux Homebrew
+[[ uname = "Linux" ]] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # nvm
 [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
