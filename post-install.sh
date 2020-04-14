@@ -10,6 +10,9 @@
 # fzf
 "$(brew --prefix)/opt/fzf/install"
 
+# git-lfs
+git lfs install
+
 # ---------------
 # Node
 # ---------------
