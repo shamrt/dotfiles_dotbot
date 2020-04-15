@@ -33,8 +33,8 @@ plugins=(
   bundler
   common-aliases
   extract
-  gitfast
-  git-extras
+  git
+  gitignore
   node
   nvm
   per-directory-history
