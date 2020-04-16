@@ -33,6 +33,7 @@ plugins=(
   bundler
   common-aliases
   extract
+  fasd
   git
   gitignore
   node
@@ -42,7 +43,6 @@ plugins=(
   python
   vscode
   yarn
-  z
   zsh_reload
 )
 

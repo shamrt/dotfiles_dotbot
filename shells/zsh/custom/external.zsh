@@ -16,7 +16,5 @@ eval "$(pyenv init -)"
 # git-extras
 source "$(brew --prefix)/opt/git-extras/share/git-extras/git-extras-completion.zsh"
 
-# === z ===
-# https://github.com/rupa/z
-
-source "$(brew --prefix)/etc/profile.d/z.sh"
+# fasd
+eval "$(fasd --init auto)"
