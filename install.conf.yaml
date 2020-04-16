@@ -2,6 +2,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [sh pre-install.sh, Running pre-install script]
 
 - link:
     # Terminal:
@@ -62,4 +63,5 @@
 
 # Cleaning up:
 - shell:
+  - [sh post-install.sh, Running post-install script]
   - [brew cleanup, Cleaning up]
