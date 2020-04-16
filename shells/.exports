@@ -31,6 +31,12 @@ PATH="$(brew --prefix)/opt/postgresql@9.6/bin:$PATH"
 # npm:
 PATH="$(brew --prefix)/share/npm/bin:$PATH"
 
+# SQLite
+PATH="$(brew --prefix)/opt/sqlite/bin:$PATH"
+
+# OpenSSL
+PATH="$(brew --prefix)/opt/openssl@1.1/bin:$PATH"
+
 # python2 (required by npm and other tools, installed via pyenv):
 PATH="$PATH:$HOME/.pyenv/versions/2.7.17/bin"
 
