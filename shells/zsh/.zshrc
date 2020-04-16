@@ -61,32 +61,35 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sb
 source "$ZSH/oh-my-zsh.sh"
 #source "$HOME/.shell_env"
 
-fpath=($fpath "/home/smartin/.zfunctions")
-
-# completions
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
 # Spaceship prompt
 autoload -U promptinit
 promptinit
 prompt spaceship
+
+fpath=($fpath "/home/smartin/.zfunctions")
 
 SPACESHIP_TIME_SHOW=true
 
 # Linux Homebrew
 [[ $(uname) = "Linux" ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+BREW_PREFIX=$(brew --prefix)
+export BREW_PREFIX
+
+# completions
+if type brew &>/dev/null; then
+  FPATH=$BREW_PREFIX/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # nvm
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"                                       # This loads nvm
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+[ -s "$BREW_PREFIX/opt/nvm/nvm.sh" ] && . "$BREW_PREFIX/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && . "$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Zsh syntax highlighting
-. "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+. "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

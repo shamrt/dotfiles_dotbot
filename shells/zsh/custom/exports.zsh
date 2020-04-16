@@ -2,6 +2,8 @@
 
 # `.exports` is used to provide custom variables.
 
+BREW_PREFIX=$(brew --prefix)
+
 # === Compiler flags ===
 
 # This is required because `openssl` is keg-only in `brew`,
@@ -16,22 +18,22 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 # These lines should be the first ones
 
 # GPG agent:
-PATH="$(brew --prefix)/opt/gpg-agent/bin:$PATH"
+PATH="$BREW_PREFIX/opt/gpg-agent/bin:$PATH"
 
 # Adds `pipsi` and `pipx` binary files:
 PATH="$HOME/.local/bin:$PATH"
 
 # postgres@9.6 utilities like `psql`:
-PATH="$(brew --prefix)/opt/postgresql@9.6/bin:$PATH"
+PATH="$BREW_PREFIX/opt/postgresql@9.6/bin:$PATH"
 
 # npm:
-PATH="$(brew --prefix)/share/npm/bin:$PATH"
+PATH="$BREW_PREFIX/share/npm/bin:$PATH"
 
 # SQLite
-PATH="$(brew --prefix)/opt/sqlite/bin:$PATH"
+PATH="$BREW_PREFIX/opt/sqlite/bin:$PATH"
 
 # OpenSSL
-PATH="$(brew --prefix)/opt/openssl@1.1/bin:$PATH"
+PATH="$BREW_PREFIX/opt/openssl@1.1/bin:$PATH"
 
 # python2 (required by npm and other tools, installed via pyenv):
 PATH="$PATH:$HOME/.pyenv/versions/2.7.17/bin"
@@ -73,7 +75,7 @@ export MANPAGER='less'
 
 # nvm:
 export NVM_DIR="$HOME/.nvm"
-source "$(brew --prefix)/opt/nvm/nvm.sh"
+source "$BREW_PREFIX/opt/nvm/nvm.sh"
 
 # pyenv:
 [[ -e $(pyenv init -) ]] && eval "$(pyenv init -)"
