@@ -10,6 +10,9 @@
 # fzf
 "$(brew --prefix)/opt/fzf/install"
 
+# git-lfs
+git lfs install
+
 # ---------------
 # Node
 # ---------------
@@ -18,7 +21,4 @@
 export NVM_DIR="$HOME/.nvm"
 
 mkdir -p $NVM_DIR
-
-# spaceship theme
-npm install -g spaceship-prompt
 

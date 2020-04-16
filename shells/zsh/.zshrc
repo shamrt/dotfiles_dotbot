@@ -36,21 +36,23 @@ plugins=(
   bundler
   common-aliases
   extract
-  gitfast
+  git
+  gitignore
   node
   nvm
   per-directory-history
   pj
   python
   vscode
+  yarn
   z
   zsh_reload
 )
 
-if [[ uname = "Darwin" ]]; then
-  plugins = (
+if [[ $(uname) = "Darwin" ]]; then
+  plugins=(
     "${plugins[@]}"
-    macos
+    osx
   )
 fi
 
@@ -59,7 +61,7 @@ fi
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin"
 
 # Custom envs:
-#source "$ZSH/oh-my-zsh.sh"
+source "$ZSH/oh-my-zsh.sh"
 #source "$HOME/.shell_env"
 
 fpath=($fpath "/home/smartin/.zfunctions")
@@ -73,17 +75,18 @@ if type brew &>/dev/null; then
 fi
 
 # Spaceship prompt
-autoload -U promptinit; promptinit
+autoload -U promptinit
+promptinit
 prompt spaceship
 
 SPACESHIP_TIME_SHOW=true
 
-# Homebrew
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# Linux Homebrew
+[[ $(uname) = "Linux" ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # nvm
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

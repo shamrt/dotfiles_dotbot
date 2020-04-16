@@ -1,36 +1,23 @@
 #!/usr/bin/env bash
 
 # `.functions` provides helper functions for shell.
-#
-# This file is used as a part of `.shell_env`
-
 
 # === Commonly used functions ===
 
-pyclean () {
+pyclean() {
   # Cleans py[cod] and __pychache__ dirs in the current tree:
   find . | grep -E "(__pycache__|\.py[cod]$)" | xargs rm -rf
 }
 
-
-git-dowloadfolder () {
+git-dowloadfolder() {
   # Downloads folder from git repository.
   url="$1"
   svn checkout ${url/tree\/master/trunk}
 }
 
-
-mc () {
+mc() {
   # Create a new directory and enter it
   mkdir -p "$@" && cd "$@"
-}
-
-
-cdf () {
-  # cd into whatever is the forefront Finder window.
-  local path=$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')
-  echo "$path"
-  cd "$path"
 }
 
 # From Dan Ryan's blog - http://danryan.co/using-antigen-for-zsh.html
@@ -44,7 +31,7 @@ man() {
     LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
     LESS_TERMCAP_ue=$(printf "\e[0m") \
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
-      man "$@"
+    man "$@"
 }
 
 loadenv() {
@@ -52,7 +39,20 @@ loadenv() {
     if [ "${line:0:1}" = '#' ]; then
       continue
     fi
-    export $line > /dev/null
-  done < "$1"
+    export $line >/dev/null
+  done <"$1"
   echo 'Loaded!'
 }
+
+#
+# MacOS-specific
+#
+
+if [[ uname = "Darwin" ]]; then
+  cdf() {
+    # cd into whatever is the forefront Finder window.
+    local path=$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')
+    echo "$path"
+    cd "$path"
+  }
+fi
