@@ -44,6 +44,15 @@ loadenv() {
   echo 'Loaded!'
 }
 
+# Find out which process is using a port
+pslisten() {
+  if [[ -z $1 ]]; then
+    echo "Error: Specify a port number"
+  else
+    echo $(lsof -n -i4TCP:$1 | grep LISTEN)
+  fi
+}
+
 #
 # MacOS-specific
 #
