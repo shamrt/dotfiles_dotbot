@@ -8,10 +8,12 @@ BREW_PREFIX=$(brew --prefix)
 
 # This is required because `openssl` is keg-only in `brew`,
 # see: `brew info openssl` for more information.
-export LDFLAGS="-L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+if [[ $(uname) = "Darwin" ]]; then
+    export LDFLAGS="-L/usr/local/opt/openssl/lib"
+    export CPPFLAGS="-I/usr/local/opt/openssl/include"
+    export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
+    export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+fi
 
 # === Path modifications ===
 
