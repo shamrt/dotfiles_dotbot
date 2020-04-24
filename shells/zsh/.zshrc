@@ -57,12 +57,12 @@ fi
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin"
 
+fpath=($fpath "$HOME/.zfunctions")
+
 # Spaceship prompt
 autoload -U promptinit
 promptinit
 prompt spaceship
-
-fpath=($fpath "/home/smartin/.zfunctions")
 
 SPACESHIP_TIME_SHOW=true
 
