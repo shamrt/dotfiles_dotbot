@@ -10,7 +10,11 @@
   },
   {
     "link": {
-      "~/.zshrc": "shells/zsh/zshrc"
+      "~/.zshrc": "shells/zsh/.zshrc",
+      "~/.oh-my-zsh/custom/aliases.zsh": "shells/zsh/custom/aliases.zsh",
+      "~/.oh-my-zsh/custom/exports.zsh": "shells/zsh/custom/exports.zsh",
+      "~/.oh-my-zsh/custom/external.zsh": "shells/zsh/custom/external.zsh",
+      "~/.oh-my-zsh/custom/functions.zsh": "shells/zsh/custom/functions.zsh"
     }
   }
 ]

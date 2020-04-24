@@ -9,14 +9,11 @@
     }
   },
   {
-    "clean": [ "~/.config/zathura" ]
+    "clean": ["~/.config/zathura"]
   },
   {
     "link": {
-      "~/.config/zathura/zathurarc": "apps/zathura/zathurarc",
-      "~/.local/share/applications/zathura.desktop": "windowmanager/applications/zathura.desktop",
-      "~/.local/share/applications/pdf.desktop": "windowmanager/applications/zathura.desktop"
+      "~/.config/zathura/zathurarc": "apps/zathura/zathurarc"
     }
   }
 ]
-

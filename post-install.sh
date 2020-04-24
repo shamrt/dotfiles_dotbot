@@ -1,11 +1,17 @@
 #!/usr/bin/env sh
 
+# Initialize Zsh config
+. "$HOME/.zshrc"
+
 # ---------------
 # Homebrew
 # ---------------
 
 # fzf
-"$HOMEBREW_PREFIX/opt/fzf/install"
+"$(brew --prefix)/opt/fzf/install"
+
+# git-lfs
+git lfs install
 
 # ---------------
 # Node
@@ -16,7 +22,3 @@ export NVM_DIR="$HOME/.nvm"
 
 mkdir -p $NVM_DIR
 
-
-
-# spaceship theme
-npm install -g spaceship-prompt

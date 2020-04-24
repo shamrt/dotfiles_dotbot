@@ -1,4 +1,0 @@
-#!/bin/bash
-
-echo "<span color=\"#ebbdb2\"> 📆$(date '+ %a, %d.%m.%Y ⏰ %H:%M') </span>"
-
