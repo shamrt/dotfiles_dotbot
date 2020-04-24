@@ -57,10 +57,6 @@ fi
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/snap/bin"
 
-# Custom envs:
-source "$ZSH/oh-my-zsh.sh"
-#source "$HOME/.shell_env"
-
 # Spaceship prompt
 autoload -U promptinit
 promptinit
@@ -90,6 +86,10 @@ fi
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Custom envs:
+source "$ZSH/oh-my-zsh.sh"
+#source "$HOME/.shell_env"
 
 # Zsh syntax highlighting
 . "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
