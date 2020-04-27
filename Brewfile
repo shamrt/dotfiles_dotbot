@@ -4,6 +4,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 
+brew "byobu"
 brew "coreutils"
 brew "curl"
 brew "diff-so-fancy"
