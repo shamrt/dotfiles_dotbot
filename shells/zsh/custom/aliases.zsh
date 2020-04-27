@@ -18,9 +18,6 @@ alias dt="cd ~/Desktop"
 alias p="cd ~/code/workspaces"
 alias g="git"
 
-# Sorts directories in top, colors, and prints `/` at directories:
-alias ls="/usr/local/bin/gls --color -h --group-directories-first -F"
-
 # Pretty print XML (use `jq` for json):
 alias xq="xmllint --format"
 
@@ -29,14 +26,6 @@ alias localip="ipconfig getifaddr en0"
 
 # Get week number
 alias week='date +%V'
-
-# Calculator:
-# https://github.com/arzzen/calc.plugin.zsh
-cc() {
-  python3 -c "from math import *; print($*);"
-}
-
-alias cc='noglob cc'
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
@@ -52,6 +41,9 @@ alias www='python -m SimpleHTTPServer 8000'
 #
 
 if [[ uname = "Darwin" ]]; then
+  # Sorts directories in top, colors, and prints `/` at directories:
+  alias ls="/usr/local/bin/gls --color -h --group-directories-first -F"
+
   # Lock the screen (when going AFK)
   alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
