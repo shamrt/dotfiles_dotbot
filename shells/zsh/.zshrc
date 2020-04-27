@@ -35,6 +35,7 @@ plugins=(
   extract
   fasd
   git
+  github
   gitignore
   node
   nvm
