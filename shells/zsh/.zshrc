@@ -81,16 +81,16 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+# Custom envs:
+source "$ZSH/oh-my-zsh.sh"
+#source "$HOME/.shell_env"
+
 # nvm
 [ -s "$BREW_PREFIX/opt/nvm/nvm.sh" ] && . "$BREW_PREFIX/opt/nvm/nvm.sh"                                       # This loads nvm
 [ -s "$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && . "$BREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Custom envs:
-source "$ZSH/oh-my-zsh.sh"
-#source "$HOME/.shell_env"
 
 # Zsh syntax highlighting
 . "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
