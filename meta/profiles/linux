@@ -1,10 +1,7 @@
-defaultapps
-apt.linux
-ruby
+homebrew
 dev
-git.np4
-vim.linux
-fish.linux
+defaultapps
+ruby
 tmux.linux
-binaries.linux
+vim.linux
 zsh
