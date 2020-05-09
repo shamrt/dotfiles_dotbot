@@ -1,10 +1,25 @@
 tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
 
-brew "blueutil"
-cask "maccy"
+brew "byobu"
+brew "imagemagick"
 brew "mas"
-brew "pinentry-mac"
+brew "mysql-client"
+brew "postgresql@9.6", restart_service: true
+brew "redis", restart_service: true
 
+cask "clipy"
+cask "font-consolas-for-powerline"
+cask "font-fira-code"
+cask "font-roboto-mono"
+cask "font-roboto-mono-for-powerline"
+cask "joplin"
+cask "keyboard-cleaner"
+cask "postman"
 cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
@@ -12,14 +27,14 @@ cask "qlstephen"
 cask "quicklook-json"
 cask "rectangle"
 cask "sequel-pro"
+cask "spotify"
 cask "tableplus"
+cask "telegram"
 cask "the-unarchiver"
+cask "visual-studio-code"
 
-mas "Cleaner-App", id: 1013897218
-mas "Dato", id: 1470584107
 mas "HazeOver", id: 430798174
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Telegram", id: 747648890
 mas "Xcode", id: 497799835
