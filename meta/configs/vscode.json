@@ -1,17 +1,10 @@
 [
   {
-    "defaults": {
-      "link": {
-        "create": true,
-        "relink": true,
-        "force": true
-      }
-    }
-  },
-  {
-    "link": {
-      "~/Library/Application Support/Code/User/keybindings.json": "apps/VSCode/keybindings.json",
-      "~/Library/Application Support/Code/User/settings.json": "apps/VSCode/settings.json"
-    }
+    "shell": [
+      [
+        "code --install-extension shan.code-settings-sync",
+        "Installing Settings Sync extension"
+      ]
+    ]
   }
 ]

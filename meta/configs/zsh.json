@@ -9,6 +9,16 @@
     }
   },
   {
+    "shell": [
+      ["rm -rf ~/.oh-my-zsh", "Removing Oh My Zsh configs"],
+      ["npm install -g spaceship-prompt", "Installing Spaceship prompt"],
+      [
+        "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"",
+        "Installing Oh My Zsh"
+      ]
+    ]
+  },
+  {
     "link": {
       "~/.zshrc": "shells/zsh/.zshrc",
       "~/.oh-my-zsh/custom/aliases.zsh": "shells/zsh/custom/aliases.zsh",

@@ -1,0 +1,7 @@
+[
+    {
+        "shell": [
+            ["xargs sudo apt install -y < linux/packages.txt", "Installing Debian packages"]
+        ]
+    }
+]

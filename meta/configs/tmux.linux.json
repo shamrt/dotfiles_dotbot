@@ -10,7 +10,7 @@
   },
   {
     "shell": [
-      ["sudo gem install tmuxinator", "Install tmuxinator"]
+      ["gem install tmuxinator", "Install tmuxinator"]
     ]
   },
   {

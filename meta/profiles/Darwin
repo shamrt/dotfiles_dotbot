@@ -1,4 +1,5 @@
 homebrew
+homebrew.macos
 dev
 git
 go
@@ -11,3 +12,4 @@ sublime
 tmux.osx
 vim.osx
 vscode
+zsh

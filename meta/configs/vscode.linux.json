@@ -1,0 +1,5 @@
+[
+  {
+    "shell": [["sudo snap install code --classic", "Installing Visual Studio Code"]]
+  }
+]

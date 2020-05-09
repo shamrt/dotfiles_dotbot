@@ -1,0 +1,6 @@
+fonts-firacode
+fonts-powerline
+fonts-roboto
+imagemagick
+spotify-client
+telegram-desktop

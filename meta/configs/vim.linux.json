@@ -9,14 +9,14 @@
     }
   },
   {
-    "clean": [ "~/.vim" ]
+    "clean": ["~/.vim"]
   },
   {
     "link": {
       "~/.vim/UltiSnips": "editors/vim/vim/UltiSnips",
-      "~/.vim/autoload/plug.vim" : "editors/vim/vim/autoload/plug.vim",
-      "~/.vim/ftplugin/fish.vim" : "editors/vim/vim/ftplugin/fish.vim",
-      "~/.vim/ftdetect/xaml.vim" : "editors/vim/vim/ftdetect/xaml.vim",
+      "~/.vim/autoload/plug.vim": "editors/vim/vim/autoload/plug.vim",
+      "~/.vim/ftplugin/fish.vim": "editors/vim/vim/ftplugin/fish.vim",
+      "~/.vim/ftdetect/xaml.vim": "editors/vim/vim/ftdetect/xaml.vim",
       "~/.vim/insert_matching_spaces.vim": "editors/vim/vim/insert_matching_spaces.vim",
       "~/.vim/map_line_block_mover_keys.vim": "editors/vim/vim/map_line_block_mover_keys.vim",
       "~/.vim/map_highlighting_keys.vim": "editors/vim/vim/map_highlighting_keys.vim",
@@ -30,17 +30,20 @@
       "~/.config/nvim/init.vim": "editors/vim/config/nvim/init.linux.vim",
       "~/.config/nvim/coc-settings.json": "editors/vim/config/nvim/coc-settings.json",
       "~/.vim/plugins.vim": "editors/vim/plugins/plugins_linux.vim",
-      "~/.vim/plugins_shared.vim": "editors/vim/plugins/plugins_shared.vim",
-      "~/.local/share/applications/vim.desktop": "windowmanager/applications/vim.desktop",
-      "~/.local/share/applications/text.desktop": "windowmanager/applications/vim.desktop"
+      "~/.vim/plugins_shared.vim": "editors/vim/plugins/plugins_shared.vim"
     }
   },
   {
     "shell": [
-      ["pip2 install --user neovim", "Installing Python 2 NeoVim plugin"],
       ["pip3 install --user neovim", "Installing Python 3 NeoVim plugin"],
-      ["pip3 install --user neovim-remote", "Installing Python 3 NeoVim Remote plugin"],
-      ["vim -c 'PlugClean!' -c 'PlugInstall' -c 'PlugUpdate' -c 'q' -c 'q'", "Installing vim plugins"]
+      [
+        "pip3 install --user neovim-remote",
+        "Installing Python 3 NeoVim Remote plugin"
+      ],
+      [
+        "vim -c 'PlugClean!' -c 'PlugInstall' -c 'PlugUpdate' -c 'q' -c 'q'",
+        "Installing vim plugins"
+      ]
     ]
   }
 ]
