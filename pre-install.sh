@@ -1,7 +1,8 @@
 #!/usr/local/env sh
 
-# spaceship theme
-npm install -g spaceship-prompt
-
-# Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# OS-specific pre-installs
+if [ $(uname) = "Darwin" ]; then
+    . ./macos/pre-install.sh
+elif [ $(uname) = "Linux" ]; then
+    . ./linux/pre-install.sh
+fi
