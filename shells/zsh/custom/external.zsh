@@ -12,9 +12,6 @@ PROJECT_PATHS=(~/code ~/code/workspaces ~/code/workspaces/ro)
 # npm
 source <(npm completion)
 
-# pyenv
-eval "$(pyenv init -)"
-
 # git-extras
 source "$BREW_PREFIX/opt/git-extras/share/git-extras/git-extras-completion.zsh"
 
