@@ -31,6 +31,9 @@ PATH="$BREW_PREFIX/opt/postgresql@9.6/bin:$PATH"
 # npm:
 PATH="$BREW_PREFIX/share/npm/bin:$PATH"
 
+# Yarn
+PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 # SQLite
 PATH="$BREW_PREFIX/opt/sqlite/bin:$PATH"
 
