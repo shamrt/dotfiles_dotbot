@@ -83,10 +83,10 @@ export NVM_DIR="$HOME/.nvm"
 source "$BREW_PREFIX/opt/nvm/nvm.sh"
 
 # pyenv:
-[[ -e $(pyenv init -) ]] && eval "$(pyenv init -)"
+[[ -n $(command -v pyenv) ]] && eval "$(pyenv init -)"
 
 # rbenv:
-[[ -e $(rbenv init -) ]] && eval "$(rbenv init -)"
+[[ -n $(command -v rbenv) ]] && eval "$(rbenv init -)"
 
 # rustup:
 [[ -e $HOME/.cargo/bin ]] && source "$HOME/.cargo/env"
